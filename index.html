@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <!-- Meta Tags for SEO -->
+  <meta name="description"
+    content="Kahramanmaraş ve çevresinde 7/24 hızlı, güvenilir ve uygun fiyatlı oto kurtarma, çekici ve yol yardım hizmeti.">
+  <meta name="keywords"
+    content="kahramanmaraş oto kurtarma, çekici, yol yardım, furkan oto kurtarma, araç taşıma, şehir içi çekici, şehir dışı çekici">
+  <meta name="author" content="Furkan Oto Kurtarma">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (Facebook, WhatsApp vs.) -->
+  <meta property="og:title" content="Furkan Oto Kurtarma - Kahramanmaraş 7/24 Çekici Hizmeti">
+  <meta property="og:description"
+    content="Araçla yolda kaldığınızda Kahramanmaraş’ta güvenilir yol arkadaşınız. Hızlı, çözüm odaklı ve güler yüzlü hizmet.">
+  <meta property="og:image" content="https://seninsiteadresin.com/logo.jpg"> <!-- logo linki -->
+  <meta property="og:url" content="https://seninsiteadresin.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Furkan Oto Kurtarma">
+  <meta name="twitter:description" content="Kahramanmaraş 7/24 oto kurtarma ve yol yardım hizmeti.">
+  <meta name="twitter:image" content="https://seninsiteadresin.com/logo.jpg">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Furkan Oto Kurtarma | Kahramanmaraş 7/24 Oto Çekici ve Yol Yardım</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js" defer></script>
+  <style>
+    .active-link {
+      color: #8e1e3a !important;
+      font-weight: bold;
+      background-color: #fbeaea;
+      /* Açık kırmızımsı zemin */
+      border-radius: 6px;
+      padding: 4px 8px;
+    }
+
+
+    .active-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 2px;
+      background-color: #8e1e3a;
+      border-radius: 1px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .glow-btn {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glow-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255, 255, 255, 0.4), transparent);
+      transform: skewX(-20deg);
+    }
+
+    .glow-btn:hover::before {
+      left: 125%;
+      transition: 0.75s;
+    }
+
+    section {
+      min-height: 100vh;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .loader h1 {
+      font-size: 2rem;
+      color: #8e1e3a;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.4;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <h1>Furkan Oto Kurtarma</h1>
+  </div>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+      <div class="flex items-center gap-2">
+        <img src="public/images/Logo_2.png" alt="Logo"
+          class="h-10 w-10 object-contain">
+        <h1 class="text-xl font-bold text-[#8e1e3a]">Furkan Oto Kurtarma</h1>
+      </div>
+      <button class="md:hidden block text-[#8e1e3a]" id="nav-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <nav id="nav-menu"
+        class="w-full md:w-auto mt-4 md:mt-0 hidden md:flex md:items-center space-y-2 md:space-y-0 md:space-x-6">
+
+        <a href="#hero" data-link="hero"
+          class="nav-link block hover:text-[#8e1e3a] font-semibold transition duration-300 ease-in-out">
+          Anasayfa
+        </a>
+
+        <a href="#services" data-link="services"
+          class="nav-link block hover:text-[#8e1e3a] font-semibold transition duration-300 ease-in-out">
+          Hizmetler
+        </a>
+
+        <a href="#about" data-link="about"
+          class="nav-link block hover:text-[#8e1e3a] font-semibold transition duration-300 ease-in-out">
+          Hakkımda
+        </a>
+
+        <a href="#gallery" data-link="gallery"
+          class="nav-link block hover:text-[#8e1e3a] font-semibold transition duration-300 ease-in-out">
+          Galeri
+        </a>
+
+        <a href="#contact" data-link="contact"
+          class="nav-link block hover:text-[#8e1e3a] font-semibold transition duration-300 ease-in-out">
+          İletişim
+        </a>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <!-- Hero -->
+    <section id="hero"
+      class="bg-gradient-to-r from-[#2c3e50] to-[#8e1e3a] text-white px-6 text-center flex flex-col justify-center">
+      <h2 class="text-4xl md:text-5xl font-bold fade">FURKAN OTO KURTARMA</h2>
+      <p class="mt-4 text-xl fade">Kahramanmaraş ve çevresinde 7/24 hızlı, güvenilir ve uygun fiyatlı oto çekici hizmeti
+        sunuyoruz. Araçla yolda kalmak stresli olabilir; biz bu anlarda yanınızdayız.</p>
+      <div class="mt-6 flex justify-center gap-4 fade">
+        <a href="tel:05464352168"
+          class="glow-btn bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-bold">📞 Hemen Ara</a>
+        <a href="https://wa.me/905464352168"
+          class="glow-btn bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md font-bold">💬 WhatsApp</a>
+      </div>
+    </section>
+    <!-- Services -->
+    <section id="services" class="bg-gray-50 px-6 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-[#2c3e50] fade">🚗 Hizmetlerimiz</h2>
+        <p class="text-lg text-gray-600 fade">7/24 güvenli, hızlı ve uygun fiyatlı oto kurtarma çözümleri</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <!-- Kart 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 fade">
+          <div class="text-5xl mb-4">🏙️</div>
+          <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">Şehir İçi Çekici</h3>
+          <p class="text-gray-700 mb-4">Şehir içinde aracınız arıza yaptıysa hiç endişe etmeyin. En hızlı şekilde
+            yanınızdayız.</p>
+          <a href="tel:05464352168"
+            class="inline-block mt-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded glow-btn text-sm">📞
+            Hemen Ara</a>
+        </div>
+
+        <!-- Kart 2 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 fade">
+          <div class="text-5xl mb-4">🛣️</div>
+          <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">Şehir Dışı Taşıma</h3>
+          <p class="text-gray-700 mb-4">İl dışı veya uzun mesafe taşıma hizmetimiz ile aracınızı güvenle yeni adresine
+            ulaştırıyoruz.</p>
+          <a href="tel:05464352168"
+            class="inline-block mt-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded glow-btn text-sm">📞
+            Hemen Ara</a>
+        </div>
+
+        <!-- Kart 3 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 fade">
+          <div class="text-5xl mb-4">⏰</div>
+          <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">7/24 Yol Yardım</h3>
+          <p class="text-gray-700 mb-4">Gece gündüz fark etmeksizin, haftanın her günü bize ulaşabilir ve destek
+            alabilirsiniz.</p>
+          <a href="tel:05464352168"
+            class="inline-block mt-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded glow-btn text-sm">📞
+            Hemen Ara</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="bg-gray-50 px-6 py-20">
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center fade bg-white shadow-md rounded-xl p-6">
+
+        <!-- Görsel -->
+        <div class="flex justify-center">
+          <img src="public/images/Logo_2.png" alt="Furkan Oto Kurtarma"
+            class="rounded-lg shadow-lg w-full max-w-sm object-cover">
+        </div>
+
+        <!-- Metin -->
+        <div>
+          <h2 class="text-3xl font-bold text-[#2c3e50] mb-4">👨‍🔧 Hakkımda</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Merhaba, ben Furkan. Kahramanmaraş’ta oto kurtarma alanında çözüm odaklı ve hızlı hizmet anlayışıyla
+            çalışıyorum.
+            Müşteri memnuniyeti benim için öncelik değil, bir alışkanlık.
+          </p>
+          <p class="text-lg text-gray-700 mt-4 leading-relaxed">
+            Her çağrı benim için yeni bir sorumluluk, her müşteri yeni bir dost. <strong>Sadece araç değil, güven
+              taşıyorum.</strong>
+            Hızlı geri dönüş, uygun fiyat ve güler yüzlü hizmetle yolda kaldığınızda yanınızdayım.
+          </p>
+          <p class="text-lg text-gray-700 mt-4 italic">
+            "Bir kez çalışınca, hep ararsınız."
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="gallery" class="bg-white py-20 px-6">
+      <div class="max-w-6xl mx-auto text-center fade">
+        <h2 class="text-3xl font-bold text-[#8e1e3a] mb-4">📸 Galeri</h2>
+        <p class="text-lg text-gray-600 mb-10">
+          Hizmet verdiğimiz anlardan seçtiğimiz kareler. Kaliteyi ve güveni yansıtıyoruz.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+          <!-- Galeri 1 -->
+          <a data-fslightbox="gallery" href="public/images/bmw.jpeg"
+            class="group relative overflow-hidden rounded-lg shadow hover:shadow-xl transition-all duration-300">
+            <img src="public/images/bmw.jpeg" alt="Şehir içi çekici aracı"
+              class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500">
+          </a>
+
+          <!-- Galeri 2 -->
+          <a data-fslightbox="gallery" href="public/images/ford.jpeg"
+            class="group relative overflow-hidden rounded-lg shadow hover:shadow-xl transition-all duration-300">
+            <img src="public/images/ford.jpeg" alt="Şehir dışı araç taşıma hizmeti"
+              class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500">
+          </a>
+
+          <!-- Galeri 3 -->
+          <a data-fslightbox="gallery" href="public/images/citroen_nemo.jpeg"
+            class="group relative overflow-hidden rounded-lg shadow hover:shadow-xl transition-all duration-300">
+            <img src="public/images/citroen_nemo.jpeg" alt="Yol yardımı sırasında çekim"
+              class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500">
+          </a>
+
+          <!-- Galeri 4 -->
+          <a data-fslightbox="gallery" href="public/images/opel_astra.jpeg"
+            class="group relative overflow-hidden rounded-lg shadow hover:shadow-xl transition-all duration-300">
+            <img src="public/images/opel_astra.jpeg" alt="Yol kenarında hizmet görüntüsü"
+              class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500">
+          </a>
+
+          <!-- Galeri 5 -->
+          <a data-fslightbox="gallery" href="public/images/opel_astra_2.jpeg"
+            class="group relative overflow-hidden rounded-lg shadow hover:shadow-xl transition-all duration-300">
+            <img src="public/images/opel_astra_2.jpeg" alt="Gece hizmeti görüntüsü"
+              class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500">
+          </a>
+
+          <!-- Galeri 6 -->
+          <a data-fslightbox="gallery" href="public/images/opel_2.jpeg"
+            class="group relative overflow-hidden rounded-lg shadow hover:shadow-xl transition-all duration-300">
+            <img src="public/images/opel_2.jpeg" alt="Furkan oto kurtarma aracı"
+              class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500">
+          </a>
+          <!-- Galeri 7 -->
+          <a data-fslightbox="gallery" href="public/images/opel_3.jpeg"
+            class="group relative overflow-hidden rounded-lg shadow hover:shadow-xl transition-all duration-300">
+            <img src="public/images/opel_3.jpeg" alt="Furkan oto kurtarma aracı"
+              class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500">
+          </a>
+          <!-- Galeri 8 -->
+          <a data-fslightbox="gallery" href="public/images/pejo.jpeg"
+            class="group relative overflow-hidden rounded-lg shadow hover:shadow-xl transition-all duration-300">
+            <img src="public/images/pejo.jpeg" alt="Furkan oto kurtarma aracı"
+              class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500">
+          </a>
+           <!-- Galeri 9 -->
+          <a data-fslightbox="gallery" href="public/images/pejo_206.jpeg"
+            class="group relative overflow-hidden rounded-lg shadow hover:shadow-xl transition-all duration-300">
+            <img src="public/images/pejo_206.jpeg" alt="Furkan oto kurtarma aracı"
+              class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500">
+          </a>
+          <!-- Galeri 10 -->
+          <a data-fslightbox="gallery" href="public/images/transit_vw.jpeg"
+            class="group relative overflow-hidden rounded-lg shadow hover:shadow-xl transition-all duration-300">
+            <img src="public/images/transit_vw.jpeg" alt="Furkan oto kurtarma aracı"
+              class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500">
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Contact -->
+    <section id="contact" class="bg-white px-6">
+      <div class="max-w-2xl mx-auto text-center fade">
+        <h2 class="text-3xl font-bold text-[#8e1e3a] mb-6">📬 Bize Ulaşın</h2>
+        <p class="text-lg mb-6">Her türlü soru, öneri ve şikayetleriniz için aşağıdaki formu doldurabilirsiniz. Size en
+          kısa sürede dönüş sağlanacaktır.</p>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-2 max-w-2xl mx-auto text-left">
+          <!-- Telefon -->
+          <div class="flex items-center bg-blue-50 p-4 rounded shadow hover:shadow-md transition">
+            <span class="text-blue-600 text-2xl mr-4">📞</span>
+            <p class="text-lg">
+              <strong>Telefon:</strong>
+              <a href="tel:05464352168" class="text-blue-700 hover:underline">0546 435 2168</a>
+            </p>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="flex items-center bg-green-50 p-4 rounded shadow hover:shadow-md transition">
+            <span class="text-green-600 text-2xl mr-4">💬</span>
+            <p class="text-lg">
+              <strong>WhatsApp:</strong>
+              <a href="https://wa.me/905464352168" class="text-green-700 hover:underline">Mesaj Gönder</a>
+            </p>
+          </div>
+
+          <!-- Instagram -->
+          <div class="flex items-center bg-pink-50 p-4 rounded shadow hover:shadow-md transition">
+            <span class="text-pink-600 text-2xl mr-4">📷</span>
+            <p class="text-lg">
+              <strong>Instagram:</strong>
+              <a href="https://instagram.com/furkanotokurtarma.46" target="_blank"
+                class="text-pink-700 hover:underline">@furkanotokurtarma.46</a>
+            </p>
+          </div>
+
+          <!-- Konum -->
+          <div class="flex items-center bg-gray-100 p-4 rounded shadow hover:shadow-md transition">
+            <span class="text-gray-600 text-2xl mr-4">📍</span>
+            <p class="text-lg">
+              <strong>Konum:</strong>
+              Kahramanmaraş ve çevresi
+            </p>
+          </div>
+        </div>
+        <div class="mt-6">
+          <iframe class="w-full h-64 rounded shadow"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.816881354082!2d36.92639641567435!3d37.5732342299017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152ea7bb6dd1a6a1%3A0xb5e8a88e79daafbb!2sKahramanmara%C5%9F!5e0!3m2!1str!2str!4v1622393294551!5m2!1str!2str"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-[#2c3e50] text-white text-center py-6 text-sm">
+    © 2025 Furkan Oto Kurtarma – Tüm Hakları Saklıdır
+  </footer>
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+    });
+
+    // Animasyon gözlemcisi (fade effect için)
+    if (!window._furkanObserverInitialized) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+      window._furkanObserverInitialized = true;
+    }
+
+    // Mobil menü toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    navToggle?.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+
+    // Aktif menü vurgusu
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 160;
+        if (window.scrollY >= sectionTop) {
+          current = section.id;
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active-link");
+        if (link.dataset.link === current) {
+          link.classList.add("active-link");
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
