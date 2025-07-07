@@ -20,15 +20,56 @@
   "@type": "LocalBusiness",
   "name": "Furkan Oto Kurtarma",
   "image": "https://www.furkanotokurtarma.net/public/images/Logo_2.png",
+  "url": "https://www.furkanotokurtarma.net",
   "telephone": "+905464352168",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Kahramanmaraş",
     "addressCountry": "TR"
   },
-  "url": "https://www.furkanotokurtarma.net",
   "openingHours": "Mo-Su 00:00-23:59",
   "priceRange": "TL",
+  "areaServed": [
+    "Kahramanmaraş",
+    "Afşin",
+    "Elbistan",
+    "Pazarcık",
+    "Türkoğlu",
+    "Göksun",
+    "Nurhak",
+    "Çağlayancerit"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "137"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Mehmet A."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Afşin yolunda lastik patladı, Furkan Bey 20 dakikada yetişti. Çok teşekkür ederim."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Ayşe T."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Gece 2’de arabam çalışmadı ama 15 dakikada yardıma geldiler. Hızlı ve güler yüzlü hizmet."
+    }
+  ],
   "sameAs": [
     "https://www.instagram.com/furkanotokurtarma.46",
     "https://wa.me/905464352168"
@@ -73,7 +114,7 @@
   <!-- Loader -->
   <div id="loader" class="loader flex flex-col justify-center items-center h-screen bg-white fixed inset-0 z-50">
     <img src="public/images/loader-truck.gif" alt="Yükleniyor" class="w-24 h-24 animate-spin mb-4">
-    <h1 class="text-xl font-bold text-[#8e1e3a]">Furkan Oto Kurtarma</h1>
+    <h2 class="text-xl font-bold text-[#8e1e3a]">Furkan Oto Kurtarma</h2>
   </div>
 
   <!-- Navbar -->
@@ -137,6 +178,7 @@
   </header>
 
   <main class="pt-24">
+
     <!-- Hero -->
     <section id="hero"
       class="relative bg-gradient-to-r from-[#2c3e50] to-[#8e1e3a] text-white px-6 text-center flex flex-col justify-center items-center py-24 overflow-hidden">
@@ -180,9 +222,14 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="bg-gradient-to-b from-white to-gray-50 px-6 py-20">
+    <section id="services" class="bg-gradient-to-b from-white via-gray-50 to-[#f9fafb] px-6 py-20">
       <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-[#2c3e50] fade">🚗 Hizmetlerimiz</h2>
+        <h2 class="text-4xl font-bold text-[#2c3e50] fade">Hizmetlerimiz</h2>
+        <div class="flex flex-col items-center mb-6">
+          <div class="text-2xl">🚗</div>
+          <div class="mt-1 w-28 h-1 bg-[#8e1e3a] rounded-full shadow-md"></div>
+        </div>
+
         <p class="text-lg text-gray-600 fade">7/24 güvenli, hızlı ve uygun fiyatlı oto kurtarma çözümleri</p>
       </div>
 
@@ -238,8 +285,8 @@
       </div>
     </section>
 
-
-    <section id="about" class="bg-gray-50 px-6 py-20">
+    <!-- Hakkımızda -->
+    <section id="about" class="bg-gradient-to-b from-[#f9fafb] to-white px-6 py-20">
       <div
         class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center fade bg-white shadow-md rounded-xl p-6">
 
@@ -251,7 +298,10 @@
 
         <!-- Metin -->
         <div>
-          <h2 class="text-3xl font-bold text-[#2c3e50] mb-4">👨‍🔧 Hakkımda</h2>
+          <h2 class="text-3xl font-bold text-[#2c3e50] mb-2">👨‍🔧 Hakkımda</h2>
+          <div class="flex flex-col items-start mb-4">
+            <div class="w-20 h-1 bg-[#8e1e3a] rounded-full shadow-md"></div>
+          </div>
           <p class="text-lg text-gray-700 leading-relaxed">
             Merhaba, ben Furkan. Kahramanmaraş’ta oto kurtarma alanında çözüm odaklı ve hızlı hizmet anlayışıyla
             çalışıyorum.
@@ -270,10 +320,13 @@
       </div>
     </section>
 
+
     <!-- 2. Galeri HTML -->
-    <section id="gallery" class="bg-white py-20 px-6">
+    <section id="gallery" class="bg-gradient-to-b from-[#f9fafb] to-white px-6 py-20">
       <div class="max-w-6xl mx-auto text-center fade">
         <h2 class="text-3xl font-bold text-[#8e1e3a] mb-4">📸 Galeri</h2>
+        <div class="w-24 h-1 bg-[#8e1e3a] rounded-full mx-auto mb-6"></div>
+
         <p class="text-lg text-gray-600 mb-10">
           Hizmet verdiğimiz anlardan seçtiğimiz kareler. Kaliteyi ve güveni yansıtıyoruz.
         </p>
@@ -351,9 +404,11 @@
     </section>
 
     <!-- Yorumlar -->
-    <section id="reviews" class="bg-gray-50 py-20 px-6">
+    <section id="reviews" class="bg-gradient-to-b from-white via-gray-50 to-white py-20 px-6">
       <div class="max-w-6xl mx-auto text-center fade">
         <h2 class="text-3xl font-bold text-[#2c3e50] mb-4">💬 Müşteri Yorumları</h2>
+        <div class="w-24 h-1 bg-[#8e1e3a] rounded-full mx-auto mb-6"></div>
+
         <p class="text-lg text-gray-600 mb-10">Kahramanmaraş ve çevresinden memnuniyet mesajları</p>
 
         <div class="swiper reviewSwiper max-w-4xl mx-auto">
@@ -626,9 +681,10 @@
       </div>
     </section>
     <!-- SSS -->
-    <section id="faq" class="bg-white py-20 px-6">
+    <section id="faq" class="bg-gradient-to-b from-[#f9fafb] to-white px-6 py-20">
       <div class="max-w-4xl mx-auto fade">
         <h2 class="text-3xl font-bold text-center text-[#2c3e50] mb-8">❓ Sık Sorulan Sorular</h2>
+        <div class="w-24 h-1 bg-[#8e1e3a] rounded-full mx-auto mb-6"></div>
 
         <div class="space-y-4">
 
@@ -687,9 +743,11 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="bg-white py-20 px-6">
+    <section id="contact" class="bg-gradient-to-b from-[#f9fafb] to-white px-6 py-20">
       <div class="max-w-2xl mx-auto text-center fade">
         <h2 class="text-3xl font-bold text-[#8e1e3a] mb-6">📬 Bize Ulaşın</h2>
+        <div class="w-24 h-1 bg-[#8e1e3a] rounded-full mx-auto mb-6"></div>
+
         <p class="text-lg mb-6">Her türlü soru, öneri ve şikayetleriniz için aşağıdaki formu doldurabilirsiniz. Size en
           kısa sürede dönüş sağlanacaktır.</p>
 
@@ -742,46 +800,67 @@
     </section>
 
     <!-- blog -->
-    <section id="blog" class="bg-gray-50 py-20 px-6">
+    <section id="blog" class="bg-gradient-to-b from-[#f9fafb] to-white px-6 py-20">
       <div class="max-w-6xl mx-auto text-center fade">
         <h2 class="text-3xl font-bold text-[#2c3e50] mb-6">📝 Oto Kurtarma Blog</h2>
+        <div class="w-24 h-1 bg-[#8e1e3a] rounded-full mx-auto mb-6"></div>
+
         <p class="text-lg text-gray-600 mb-10">Sıkça sorulan sorular ve oto kurtarma hakkında faydalı bilgiler burada.
         </p>
 
         <div class="grid md:grid-cols-2 gap-8 text-left">
 
-          <!-- Blog Kartları -->
-          <button onclick="openModal('blog1')"
-            class="text-left bg-white p-6 rounded-xl shadow hover:shadow-md transition">
-            <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">🚨 Yolda Kaldınız mı? Ne Yapmalısınız?</h3>
-            <p class="text-gray-700">Adım adım yardım rehberi. Çekici çağırmadan önce yapılacaklar.</p>
-          </button>
+          <!-- Blog 1 -->
+          <div onclick="openModal('blog1')" class="cursor-pointer">
+            <div class="text-left bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+              <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">🚨 Yolda Kaldınız mı? Ne Yapmalısınız?</h3>
+              <p class="text-gray-700">Adım adım yardım rehberi. Çekici çağırmadan önce yapılacaklar.</p>
+              <a href="/bloglar/yolda-kaldiniz-mi.html" target="_blank" onclick="event.stopPropagation()"
+                class="text-sm text-blue-600 hover:underline mt-3 inline-block">↗️ Sayfa olarak aç</a>
+            </div>
+          </div>
 
-          <button onclick="openModal('blog2')"
-            class="text-left bg-white p-6 rounded-xl shadow hover:shadow-md transition">
-            <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">💰 2025 Oto Kurtarma Ücretleri</h3>
-            <p class="text-gray-700">Şehir içi/dışı fiyat farkı, gece tarifesi ve ipuçları.</p>
-          </button>
+          <!-- Blog 2 -->
+          <div onclick="openModal('blog2')" class="cursor-pointer">
+            <div class="text-left bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+              <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">💰 2025 Oto Kurtarma Ücretleri</h3>
+              <p class="text-gray-700">Şehir içi/dışı fiyat farkı, gece tarifesi ve ipuçları.</p>
+              <a href="/bloglar/oto-kurtarma-ucretleri.html" target="_blank" onclick="event.stopPropagation()"
+                class="text-sm text-blue-600 hover:underline mt-3 inline-block">↗️ Sayfa olarak aç</a>
+            </div>
+          </div>
 
-          <button onclick="openModal('blog3')"
-            class="text-left bg-white p-6 rounded-xl shadow hover:shadow-md transition">
-            <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">🌙 Gece Aracınız Bozulduğunda</h3>
-            <p class="text-gray-700">Gece yol yardım süreci ve dikkat edilmesi gerekenler.</p>
-          </button>
+          <!-- Blog 3 -->
+          <div onclick="openModal('blog3')" class="cursor-pointer">
+            <div class="text-left bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+              <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">🌙 Gece Aracınız Bozulduğunda</h3>
+              <p class="text-gray-700">Gece yol yardım süreci ve dikkat edilmesi gerekenler.</p>
+              <a href="/bloglar/gece-ariza-yardimi.html" target="_blank" onclick="event.stopPropagation()"
+                class="text-sm text-blue-600 hover:underline mt-3 inline-block">↗️ Sayfa olarak aç</a>
+            </div>
+          </div>
 
-          <button onclick="openModal('blog4')"
-            class="text-left bg-white p-6 rounded-xl shadow hover:shadow-md transition">
-            <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">❄️ Kış Aylarında Oto Kurtarma</h3>
-            <p class="text-gray-700">Karlı havada çekici çağırırken dikkat etmeniz gerekenler.</p>
-          </button>
+          <!-- Blog 4 -->
+          <div onclick="openModal('blog4')" class="cursor-pointer">
+            <div class="text-left bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+              <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">❄️ Kış Aylarında Oto Kurtarma</h3>
+              <p class="text-gray-700">Karlı havada çekici çağırırken dikkat etmeniz gerekenler.</p>
+              <a href="/bloglar/kis-aylarinda-oto-kurtarma.html" target="_blank" onclick="event.stopPropagation()"
+                class="text-sm text-blue-600 hover:underline mt-3 inline-block">↗️ Sayfa olarak aç</a>
+            </div>
+          </div>
 
-          <button onclick="openModal('blog5')"
-            class="text-left bg-white p-6 rounded-xl shadow hover:shadow-md transition">
-            <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">🔧 Çekici Çağırmadan Önce Bilmeniz Gerekenler</h3>
-            <p class="text-gray-700">Konum, araç bilgisi ve hızlı müdahale için tüyolar.</p>
-          </button>
+          <!-- Blog 5 -->
+          <div onclick="openModal('blog5')" class="cursor-pointer">
+            <div class="text-left bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+              <h3 class="text-2xl font-bold text-[#8e1e3a] mb-2">🔧 Çekici Çağırmadan Önce Bilmeniz Gerekenler</h3>
+              <p class="text-gray-700">Konum, araç bilgisi ve hızlı müdahale için tüyolar.</p>
+              <a href="/bloglar/cekici-oncesi-bilmeniz-gerekenler.html" target="_blank" onclick="event.stopPropagation()"
+                class="text-sm text-blue-600 hover:underline mt-3 inline-block">↗️ Sayfa olarak aç</a>
+            </div>
+          </div>
+
         </div>
-      </div>
     </section>
 
   </main>

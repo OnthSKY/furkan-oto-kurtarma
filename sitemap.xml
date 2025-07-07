@@ -1,7 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://www.furkanotokurtarma.net/</loc>
+    <lastmod>2025-07-07</lastmod>
     <priority>1.00</priority>
   </url>
+
+  <url>
+    <loc>https://www.furkanotokurtarma.net/#services</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.furkanotokurtarma.net/#about</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.furkanotokurtarma.net/#gallery</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.furkanotokurtarma.net/#reviews</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.furkanotokurtarma.net/#faq</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.furkanotokurtarma.net/#contact</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.furkanotokurtarma.net/#blog</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Blog Sayfaları -->
+  <url>
+    <loc>https://www.furkanotokurtarma.net/bloglar/yolda-kaldiniz-ne-yapmalisiniz</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.furkanotokurtarma.net/bloglar/2025-oto-kurtarma-ucretleri</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.furkanotokurtarma.net/bloglar/gece-ariza-ne-yapmali</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.furkanotokurtarma.net/bloglar/kis-aylarinda-cekici-hizmeti</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.furkanotokurtarma.net/bloglar/cekici-cagirmadan-once</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.85</priority>
+  </url>
+
 </urlset>
