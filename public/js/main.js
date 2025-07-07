@@ -106,3 +106,41 @@ document.querySelectorAll(".faq-toggle").forEach((btn) => {
     }
   });
 });
+
+let modalOpenedFromURL = false;
+
+function openModal(id) {
+  const overlay = document.getElementById('modal-overlay');
+  const modal = document.getElementById(id);
+
+  if (overlay && modal) {
+    overlay.classList.remove('hidden');
+    modal.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden'); // scroll engelle
+
+    // URL’yi sadece manuel açmada güncelle
+    if (!modalOpenedFromURL) {
+      const blogNum = id.replace('blog', '');
+      const url = new URL(window.location);
+      url.searchParams.set('blog', blogNum);
+      history.pushState({}, '', url);
+    }
+  }
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay')?.classList.add('hidden');
+  document.querySelectorAll('.modal-content').forEach(modal => modal.classList.add('hidden'));
+  document.body.classList.remove('overflow-hidden'); // scroll'u geri getir
+  history.replaceState(null, null, window.location.pathname); // URL’i temizle
+}
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const blogId = params.get('blog');
+  if (blogId && document.getElementById(`blog${blogId}`)) {
+    modalOpenedFromURL = true;
+    openModal(`blog${blogId}`);
+  }
+});
