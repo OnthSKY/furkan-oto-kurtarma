@@ -117,9 +117,11 @@
           class="nav-link block hover:text-[#8e1e3a] font-semibold transition duration-300 ease-in-out">
           Yorumlar
         </a>
-        <a href="#faq" class="nav-link block hover:text-[#8e1e3a] font-semibold transition duration-300 ease-in-out">
+        <a href="#faq" data-link="faq"
+          class="nav-link block hover:text-[#8e1e3a] font-semibold transition duration-300 ease-in-out">
           SSS
         </a>
+
 
         <a href="#contact" data-link="contact"
           class="nav-link block hover:text-[#8e1e3a] font-semibold transition duration-300 ease-in-out">
@@ -685,7 +687,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="bg-white px-6">
+    <section id="contact" class="bg-white py-20 px-6">
       <div class="max-w-2xl mx-auto text-center fade">
         <h2 class="text-3xl font-bold text-[#8e1e3a] mb-6">📬 Bize Ulaşın</h2>
         <p class="text-lg mb-6">Her türlü soru, öneri ve şikayetleriniz için aşağıdaki formu doldurabilirsiniz. Size en
@@ -804,6 +806,7 @@
           <li><a href="#reviews" class="hover:underline">Yorumlar</a></li>
           <li><a href="#faq" class="hover:underline">SSS</a></li>
           <li><a href="#contact" class="hover:underline">İletişim</a></li>
+          <li><a href="#blog" class="hover:underline">Blog</a></li>
         </ul>
       </div>
 
@@ -835,118 +838,140 @@
     <!-- WhatsApp -->
     <a href="https://wa.me/905464352168?text=Merhaba%20Furkan%20Bey%2C%20oto%20çekiciye%20ihtiyacım%20var."
       target="_blank"
-      class="bg-green-500 hover:bg-green-600 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition transform hover:scale-110">
+      class="sticky-btn bg-green-500 hover:bg-green-600 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-xl">
       💬
     </a>
 
     <!-- Telefon -->
     <a href="tel:05464352168"
-      class="bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition transform hover:scale-110">
+      class="sticky-btn bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-xl">
       📞
     </a>
-  </div>
-<!-- Modal Overlay -->
-<div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm hidden z-40" onclick="closeModal()"></div>
 
-<!-- Blog 1 -->
-<div id="blog1" class="modal-content fixed inset-0 z-50 flex items-center justify-center hidden px-4">
-  <div class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-8 animate-fade-in-up max-h-screen overflow-y-auto">
-    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-[#8e1e3a] text-3xl font-bold transition">×</button>
-    <div class="flex items-center gap-3 mb-4">
-      <div class="text-3xl">🚨</div>
-      <h3 class="text-2xl md:text-3xl font-extrabold text-[#8e1e3a]">Yolda Kaldınız mı? Ne Yapmalısınız?</h3>
-    </div>
-    <div class="text-gray-700 text-lg leading-relaxed space-y-2">
-      <ul class="space-y-1 list-disc list-inside">
-        <li>Aracı güvenli bir bölgeye çekin.</li>
-        <li>Dörtlüleri yakın, reflektör yerleştirin.</li>
-        <li>Konumunuzu paylaşın.</li>
-        <li><strong>📞 0546 435 2168</strong> numarasını arayın.</li>
-        <li>Araca müdahale etmeyin, içinde bekleyin.</li>
-      </ul>
-      <p>Destek için: <a href="https://wa.me/905464352168" target="_blank" class="text-blue-600 underline">WhatsApp ile ulaş</a></p>
-    </div>
-  </div>
-</div>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/furkanotokurtarma.46" target="_blank"
+      class="sticky-btn w-12 h-12 rounded-full overflow-hidden shadow-lg ring-2 ring-pink-500">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+        class="w-full h-full object-cover" />
+    </a>
 
-<!-- Blog 2 -->
-<div id="blog2" class="modal-content fixed inset-0 z-50 flex items-center justify-center hidden px-4">
-  <div class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-8 animate-fade-in-up max-h-screen overflow-y-auto">
-    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-[#8e1e3a] text-3xl font-bold transition">×</button>
-    <div class="flex items-center gap-3 mb-4">
-      <div class="text-3xl">💰</div>
-      <h3 class="text-2xl md:text-3xl font-extrabold text-[#8e1e3a]">2025 Oto Kurtarma Ücretleri</h3>
-    </div>
-    <div class="text-gray-700 text-lg leading-relaxed space-y-2">
-      <p>Fiyatlar aşağıdaki faktörlere göre değişkenlik gösterir:</p>
-      <ul class="list-disc list-inside space-y-1">
-        <li>Araç tipi</li>
-        <li>Şehir içi / şehir dışı mesafe</li>
-        <li>Gece tarifesi</li>
-      </ul>
-      <p>Detaylı fiyat için <strong>📞 0546 435 2168</strong> numarasını arayın.</p>
-    </div>
   </div>
-</div>
 
-<!-- Blog 3 -->
-<div id="blog3" class="modal-content fixed inset-0 z-50 flex items-center justify-center hidden px-4">
-  <div class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-8 animate-fade-in-up max-h-screen overflow-y-auto">
-    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-[#8e1e3a] text-3xl font-bold transition">×</button>
-    <div class="flex items-center gap-3 mb-4">
-      <div class="text-3xl">🌙</div>
-      <h3 class="text-2xl md:text-3xl font-extrabold text-[#8e1e3a]">Gece Aracınız Bozulduğunda</h3>
-    </div>
-    <div class="text-gray-700 text-lg leading-relaxed space-y-2">
-      <ul class="list-disc list-inside space-y-1">
-        <li>Konum paylaşın</li>
-        <li>Araca müdahale etmeyin</li>
-        <li>Biz gelene kadar araç içinde kalın</li>
-      </ul>
-      <p><strong>Furkan Oto Kurtarma</strong> 7/24 yanınızda. 📞 0546 435 2168</p>
-    </div>
-  </div>
-</div>
 
-<!-- Blog 4 -->
-<div id="blog4" class="modal-content fixed inset-0 z-50 flex items-center justify-center hidden px-4">
-  <div class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-8 animate-fade-in-up max-h-screen overflow-y-auto">
-    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-[#8e1e3a] text-3xl font-bold transition">×</button>
-    <div class="flex items-center gap-3 mb-4">
-      <div class="text-3xl">❄️</div>
-      <h3 class="text-2xl md:text-3xl font-extrabold text-[#8e1e3a]">Kış Aylarında Oto Kurtarma</h3>
-    </div>
-    <div class="text-gray-700 text-lg leading-relaxed space-y-2">
-      <ul class="list-disc list-inside space-y-1">
-        <li>Zincir takılı mı?</li>
-        <li>Yol tipi: köy yolu / dağ yolu?</li>
-        <li>Konum ve hava durumu bilgisi önemli</li>
-      </ul>
-      <p><strong>Kar dinlemeyiz, hızlıca yanınızdayız.</strong></p>
-    </div>
-  </div>
-</div>
+  <!-- Modal Overlay -->
+  <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm hidden z-40"
+    onclick="closeModal()"></div>
 
-<!-- Blog 5 -->
-<div id="blog5" class="modal-content fixed inset-0 z-50 flex items-center justify-center hidden px-4">
-  <div class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-8 animate-fade-in-up max-h-screen overflow-y-auto">
-    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-[#8e1e3a] text-3xl font-bold transition">×</button>
-    <div class="flex items-center gap-3 mb-4">
-      <div class="text-3xl">🔧</div>
-      <h3 class="text-2xl md:text-3xl font-extrabold text-[#8e1e3a]">Çekici Çağırmadan Önce Bilmeniz Gerekenler</h3>
-    </div>
-    <div class="text-gray-700 text-lg leading-relaxed space-y-2">
-      <p>Bilgileri eksiksiz verirseniz hızlı çözüm sağlanır:</p>
-      <ul class="list-disc list-inside space-y-1">
-        <li>Konum linki</li>
-        <li>Araç tipi ve arıza durumu</li>
-        <li>Yol durumu</li>
-        <li>Yol girilebilir mi? Bariyer var mı?</li>
-      </ul>
-      <p><strong>Hazır bilgi = Hızlı müdahale</strong></p>
+  <!-- Blog 1 -->
+  <div id="blog1" class="modal-content fixed inset-0 z-50 flex items-center justify-center hidden px-4">
+    <div
+      class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-8 animate-fade-in-up max-h-screen overflow-y-auto">
+      <button onclick="closeModal()"
+        class="absolute top-4 right-4 text-gray-500 hover:text-[#8e1e3a] text-3xl font-bold transition">×</button>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="text-3xl">🚨</div>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-[#8e1e3a]">Yolda Kaldınız mı? Ne Yapmalısınız?</h3>
+      </div>
+      <div class="text-gray-700 text-lg leading-relaxed space-y-2">
+        <ul class="space-y-1 list-disc list-inside">
+          <li>Aracı güvenli bir bölgeye çekin.</li>
+          <li>Dörtlüleri yakın, reflektör yerleştirin.</li>
+          <li>Konumunuzu paylaşın.</li>
+          <li><strong>📞 0546 435 2168</strong> numarasını arayın.</li>
+          <li>Araca müdahale etmeyin, içinde bekleyin.</li>
+        </ul>
+        <p>Destek için: <a href="https://wa.me/905464352168" target="_blank" class="text-blue-600 underline">WhatsApp
+            ile ulaş</a></p>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- Blog 2 -->
+  <div id="blog2" class="modal-content fixed inset-0 z-50 flex items-center justify-center hidden px-4">
+    <div
+      class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-8 animate-fade-in-up max-h-screen overflow-y-auto">
+      <button onclick="closeModal()"
+        class="absolute top-4 right-4 text-gray-500 hover:text-[#8e1e3a] text-3xl font-bold transition">×</button>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="text-3xl">💰</div>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-[#8e1e3a]">2025 Oto Kurtarma Ücretleri</h3>
+      </div>
+      <div class="text-gray-700 text-lg leading-relaxed space-y-2">
+        <p>Fiyatlar aşağıdaki faktörlere göre değişkenlik gösterir:</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Araç tipi</li>
+          <li>Şehir içi / şehir dışı mesafe</li>
+          <li>Gece tarifesi</li>
+        </ul>
+        <p>Detaylı fiyat için <strong>📞 0546 435 2168</strong> numarasını arayın.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog 3 -->
+  <div id="blog3" class="modal-content fixed inset-0 z-50 flex items-center justify-center hidden px-4">
+    <div
+      class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-8 animate-fade-in-up max-h-screen overflow-y-auto">
+      <button onclick="closeModal()"
+        class="absolute top-4 right-4 text-gray-500 hover:text-[#8e1e3a] text-3xl font-bold transition">×</button>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="text-3xl">🌙</div>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-[#8e1e3a]">Gece Aracınız Bozulduğunda</h3>
+      </div>
+      <div class="text-gray-700 text-lg leading-relaxed space-y-2">
+        <ul class="list-disc list-inside space-y-1">
+          <li>Konum paylaşın</li>
+          <li>Araca müdahale etmeyin</li>
+          <li>Biz gelene kadar araç içinde kalın</li>
+        </ul>
+        <p><strong>Furkan Oto Kurtarma</strong> 7/24 yanınızda. 📞 0546 435 2168</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog 4 -->
+  <div id="blog4" class="modal-content fixed inset-0 z-50 flex items-center justify-center hidden px-4">
+    <div
+      class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-8 animate-fade-in-up max-h-screen overflow-y-auto">
+      <button onclick="closeModal()"
+        class="absolute top-4 right-4 text-gray-500 hover:text-[#8e1e3a] text-3xl font-bold transition">×</button>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="text-3xl">❄️</div>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-[#8e1e3a]">Kış Aylarında Oto Kurtarma</h3>
+      </div>
+      <div class="text-gray-700 text-lg leading-relaxed space-y-2">
+        <ul class="list-disc list-inside space-y-1">
+          <li>Zincir takılı mı?</li>
+          <li>Yol tipi: köy yolu / dağ yolu?</li>
+          <li>Konum ve hava durumu bilgisi önemli</li>
+        </ul>
+        <p><strong>Kar dinlemeyiz, hızlıca yanınızdayız.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog 5 -->
+  <div id="blog5" class="modal-content fixed inset-0 z-50 flex items-center justify-center hidden px-4">
+    <div
+      class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-8 animate-fade-in-up max-h-screen overflow-y-auto">
+      <button onclick="closeModal()"
+        class="absolute top-4 right-4 text-gray-500 hover:text-[#8e1e3a] text-3xl font-bold transition">×</button>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="text-3xl">🔧</div>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-[#8e1e3a]">Çekici Çağırmadan Önce Bilmeniz Gerekenler</h3>
+      </div>
+      <div class="text-gray-700 text-lg leading-relaxed space-y-2">
+        <p>Bilgileri eksiksiz verirseniz hızlı çözüm sağlanır:</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Konum linki</li>
+          <li>Araç tipi ve arıza durumu</li>
+          <li>Yol durumu</li>
+          <li>Yol girilebilir mi? Bariyer var mı?</li>
+        </ul>
+        <p><strong>Hazır bilgi = Hızlı müdahale</strong></p>
+      </div>
+    </div>
+  </div>
 
 
 </body>
